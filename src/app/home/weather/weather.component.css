@@ -1,0 +1,23 @@
+.home-weather-content{
+  height: 100vh;
+  color: white;
+  display:flex;
+  flex-direction: column;
+  justify-content: top;
+}
+.home-weather-content{
+  background-image: url("1947484.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home-content {
+  margin-left: 200px;
+  margin-right: auto;
+}
+.weather-content {
+  padding-top: 5%;
+margin-left: auto ; 
+}
+h1{
+  font-size: 54px;
+}

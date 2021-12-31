@@ -1,0 +1,27 @@
+a {
+    text-decoration: none;  
+}
+
+a:hover, a:active{
+    color: gray;
+}
+
+.navigation-items{
+    list-style-type: none;
+}
+
+mat-toolbar{
+    border-radius: 3px;
+    position: fixed;
+    z-index: 0;
+    background-color: transparent;
+}
+
+@media(max-width: 959px){
+    mat-toolbar{
+        border-radius: 0px;
+    }
+}
+ul li{
+    right: 30px;
+}
