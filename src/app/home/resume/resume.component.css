@@ -22,7 +22,6 @@
       
   .resume-right-side {
     width: 70%;
-    border: solid 1px
   }
   .resume-left-side {
     display: flex;
@@ -30,7 +29,6 @@
     align-items: center;
     flex-direction: column;
     width: 40%;
-    border: solid 1px;
     background-color: #1A5389;
     color: white;
   }

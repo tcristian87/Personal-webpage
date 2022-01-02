@@ -13,7 +13,7 @@ a:hover, a:active{
 mat-toolbar{
     border-radius: 3px;
     position: fixed;
-    z-index: 0;
+    z-index: 9;
     background-color: transparent;
 }
 
