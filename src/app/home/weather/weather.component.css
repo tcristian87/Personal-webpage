@@ -11,13 +11,14 @@
   background-repeat: no-repeat;
 }
 .home-content {
-  margin-left: 200px;
+  margin-left: 10%;
   margin-right: auto;
 }
 .weather-content {
-  padding-top: 5%;
+  padding-top: 20%;
 margin-left: auto ; 
 }
+
 h1{
   font-size: 54px;
 }
