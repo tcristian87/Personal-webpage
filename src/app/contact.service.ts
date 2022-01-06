@@ -8,13 +8,13 @@ import { map } from 'rxjs';
 })
 
 export class ContactService {
-  private mailApi = 'https://mailthis.to/i.toma_cristian@yahoo.com'
+  private mailApi = '59f42d92da394378cec84c0453ccbee9'
 
 
   constructor(private http: HttpClient) { }
   PostMessage(input: any) {
     return this.http.post(this.mailApi, input, { responseType: 'text' })
-      .pipe(
+       .pipe(
         map(
           (response) => {
             if (response) {

@@ -40,14 +40,14 @@
   .radio-input td{
     padding: 10px;
   }
-  .resume-picture {
-    border-radius:50%;
-  }
+
   .image {
     padding-top: 50px;
+    
 }
 img {
-  display:flex;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
 }
 .resume-right-side {

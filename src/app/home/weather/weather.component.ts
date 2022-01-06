@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import { WeatherService } from '../../weather.service';
 import Typewriter from 't-writer.js';
@@ -26,7 +26,9 @@ export class WeatherComponent implements OnInit {
     const target = document.querySelector('.tw')
     const writer = new Typewriter(target, {
       loop: true, 
-      typeColor: 'white' 
+      typeColor: 'white',
+      cursorColor: 'white'
+
     })
     
     writer
@@ -34,7 +36,7 @@ export class WeatherComponent implements OnInit {
         400,
         "Web Developer",
         "Front-End Developer", 
-        "JavaScript adicted"
+        "Programming addicted"
       )
       .start()
     
