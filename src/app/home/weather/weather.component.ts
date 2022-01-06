@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import * as moment from 'moment';
 import { WeatherService } from '../../weather.service';
+import Typewriter from 't-writer.js';
+
 
 
 @Component({
@@ -20,6 +22,21 @@ export class WeatherComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+    const target = document.querySelector('.tw')
+    const writer = new Typewriter(target, {
+      loop: true, 
+      typeColor: 'white' 
+    })
+    
+    writer
+      .strings(
+        400,
+        "Web Developer",
+        "Front-End Developer", 
+        "JavaScript adicted"
+      )
+      .start()
     
     this.getLocation()
      }
@@ -38,5 +55,6 @@ export class WeatherComponent implements OnInit {
     }
    
   }
+  
  
 }
