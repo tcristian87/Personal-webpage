@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import * as moment from 'moment';
 import { WeatherService } from '../../weather.service';
+
 
 @Component({
   selector: 'app-weather',
@@ -11,7 +12,7 @@ export class WeatherComponent implements OnInit {
   lat: number |undefined;
   lon: number | undefined;
   weather: any;
-    
+
   constructor(private weatherService: WeatherService) {
   }
 
@@ -19,7 +20,7 @@ export class WeatherComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    
     this.getLocation()
      }
 
@@ -38,5 +39,4 @@ export class WeatherComponent implements OnInit {
    
   }
  
-
 }
