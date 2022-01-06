@@ -18,7 +18,6 @@ import { ResumeComponent } from './home/resume/resume.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { FooterComponent } from './navigation/footer/footer.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 
 
@@ -34,7 +33,6 @@ import { SigninComponent } from './signin/signin.component';
     ResumeComponent,
     ContactComponent,
     FooterComponent,
-    SignupComponent,
     SigninComponent,
   ],
   imports: [
