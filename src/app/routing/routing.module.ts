@@ -10,7 +10,7 @@ const routes: Routes = [
 =======
   {path: 'signin', component: SigninComponent},
 >>>>>>> 314c00103bdb751107432e2ed0966a435ac32b06
-  {path: 'home/home', component: HomeComponent}
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({
