@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-resume',
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
 
+formValue! : FormGroup;
 
-  constructor() { }
+  constructor(private formbuilder: FormBuilder) { }
 
   ngOnInit(): void {
+
+
   }
   public executeSelectedChange = (event: any) =>{
     console.log(event)

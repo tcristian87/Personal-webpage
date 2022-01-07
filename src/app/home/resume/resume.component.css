@@ -2,6 +2,7 @@
   font-size: 54px;
   margin-left: 10%;
 }
+
 .experience-content {
   height: 100vh;
 }
@@ -19,7 +20,10 @@
     height: 100%;
  
   }
-      
+  .edit-button {
+   display:flex;
+   justify-content: flex-end;
+  }
   .resume-right-side {
     width: 70%;
   }
@@ -56,7 +60,7 @@ img {
   flex-direction: column;
 }
 div.resume-right-side {
-  padding: 10%;
+  padding: 10%; 
 }
 .box {
   margin-bottom: 50px;
