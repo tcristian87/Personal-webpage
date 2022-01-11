@@ -1,7 +1,6 @@
 .title {
     color: #fff;
     font-size: 54px;
-    margin-top: 0px;
 }
 .about-content {
     height: 100vh;
@@ -12,6 +11,7 @@
 
 .about-align-content {
     margin-left: 10%;
+    padding-top: 5%;
 }
 .about-text-content{
     font-size: 24px;

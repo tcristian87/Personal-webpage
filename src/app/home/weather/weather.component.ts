@@ -12,7 +12,7 @@ import Typewriter from 't-writer.js';
 })
 export class WeatherComponent implements OnInit {
   lat: number |undefined;
-  lon: number | undefined;
+  lon: number |undefined;
   weather: any;
 
   constructor(private weatherService: WeatherService) {
@@ -22,13 +22,12 @@ export class WeatherComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    this.getLocation()
     const target = document.querySelector('.tw')
     const writer = new Typewriter(target, {
       loop: true, 
       typeColor: 'white',
       cursorColor: 'white'
-
     })
     
     writer
@@ -38,25 +37,21 @@ export class WeatherComponent implements OnInit {
         "Front-End Developer", 
         "Programming addicted"
       )
-      .start()
-    
-    this.getLocation()
-     }
-
-    getLocation(){
+       .start()
+       
+  }
+  
+     getLocation(){
       if("geolocation" in navigator) {
         navigator.geolocation.watchPosition((succes)=> {
           this.lat = succes.coords.latitude; 
           this.lon= succes.coords.longitude;
-          
         this.weatherService.getWeatherDataByCoords(this.lat, this.lon ).subscribe(data=>{
           this.weather = data;
         })
-        console.log(this.weather)
       })
     }
-   
-  }
-  
+
+     }
  
 }

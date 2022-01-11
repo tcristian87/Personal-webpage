@@ -41,7 +41,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     FlexLayoutModule,
     RoutingModule,
     HttpClientModule,
-    MatProgressBarModule
+    MatProgressBarModule,
 
   ],
   providers: [],
