@@ -9,6 +9,8 @@
   background-image: url("1947484.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: right bottom, left top;
+  
 }
 .home-content {
   margin-left: 10%;

@@ -12,16 +12,66 @@ a:hover, a:active{
 
 mat-toolbar{
     border-radius: 3px;
-    position: fixed;
-    z-index: 9;
-    background-color: transparent;
+    position: absolute; 
+    z-index: 5; 
+    background: none;
 }
 
 @media(max-width: 959px){
     mat-toolbar{
         border-radius: 0px;
+        position: fixed;
     }
 }
 ul li{
     right: 30px;
+}
+
+/* arrow css */
+
+.arrow,
+.arrow:before {
+    position: fixed; 
+}
+
+/* .arrow_variable {
+  transform: rotate(225deg);
+} */
+
+.arrow,
+.arrow_variable {
+  right: 10%;
+  bottom: 10%;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+  border-left: 5px #ED1D7A solid;
+  border-top: 5px #ED1D7A solid;
+  border-right: none;
+  border-bottom: none;
+  background: none;
+}
+
+.arrow:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  border-left: 3px #ED1D7A solid;
+  border-top: 3px #ED1D7A solid;
+  border-right: none;
+  border-bottom: none;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-15px, -15px);
+  }
 }

@@ -2,26 +2,33 @@
   <div class="title">
     <h1>Experience</h1>
   </div>
-   <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
+  <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
     <mat-tab label="WORKING EXPERIENCE">
-      <div class="experience-content" >
+      <div class="experience-content">
 
-      <!-- work projects -->
-
-        </div>
+                <!-- work projects -->
+                
+      </div>
     </mat-tab>
     <mat-tab label="RESUME">
       <div class="resume-content2">
         <div class="resume-left-side">
           <div class="image">
-            <img src="../../assets/poza.png" alt="poza"/>
+            <img class="resume-img" src="../../assets/poza.png" alt="poza" />
           </div>
           <div class="resume-content-left">
-            <h2>Contact Data</h2><br>
-            Targu Mures<br>
-            <a>i.toma_cristian@yahoo.com</a><br>
-            <a href="https://github.com/tcristian87" target="_blank">GitHub Profile</a><br>
-            <a href="https://www.linkedin.com/in/toma-cristian-ioan/" target="_blank">Linkedin Profile</a><br>
+            <h2>Contact Data</h2>
+            <br />
+            Targu Mures<br />
+            <a>i.toma_cristian@yahoo.com</a><br />
+            <a href="https://github.com/tcristian87" target="_blank"
+              >GitHub Profile</a
+            ><br />
+            <a
+              href="https://www.linkedin.com/in/toma-cristian-ioan/"
+              target="_blank"
+              >Linkedin Profile</a
+            ><br />
           </div>
           <div class="skills-content">
             <table>
@@ -129,13 +136,13 @@
           </div>
         </div>
         <div class="resume-right-side">
-          <h1 style="font-weight: bold; color: #2F3A8F">Toma Cristian</h1>
+          <h1 style="font-weight: bold; color: #2f3a8f">Toma Cristian</h1>
           <hr width="30%" />
-          <h2 style="color: #2F3A8F">Junior Front End Web Developer</h2>
+          <h2 style="color: #2f3a8f">Junior Front End Web Developer</h2>
 
           <div class="personal-profile box">
             <h3>Personal Profile</h3>
-            <p *ngFor="let resume of resume">{{resume.body}}</p>
+            <p *ngFor="let resume of resume">{{ resume.body }}</p>
           </div>
           <div class="work-experience box">
             <h3>Work Experience</h3>
@@ -151,20 +158,18 @@
             <ul>
               <li>Office work whit legal papers, specific to the field</li>
               <li>Collaborated with clients</li>
-              <li>Preparation of documents, support for the bailiff
-              </li>
+              <li>Preparation of documents, support for the bailiff</li>
             </ul>
           </div>
 
           <div class="education-history box">
-            <h3>Educational History </h3>
+            <h3>Educational History</h3>
             <h4>University Dimitrie Cantemir</h4>
             <h4>Law School | 2010 - 2021</h4>
             <ul>
               <li>Specific subjects, Civil Law, Criminal Law, Procedures</li>
             </ul>
           </div>
-
         </div>
       </div>
     </mat-tab>

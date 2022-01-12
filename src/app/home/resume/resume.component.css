@@ -46,11 +46,11 @@
     padding: 10px;
   }
 
-  .image {
+.image {
     padding-top: 50px;
     
 }
-img {
+.resume-img {
   width: 100%;
   height: auto;
   border-radius: 50%;
@@ -69,4 +69,20 @@ div.resume-right-side {
 a {
   text-decoration: none;
   color: white
+}
+
+/* cards resume with hover effect */
+
+.card {
+  transition: all .1s ease-out 0s;
+  /* transform: translateY(0); */
+	width: 600px;
+  height: 300px;
+   }
+.weather-img {
+  background-size: auto;
+}
+.card:hover {
+  transform: translateY(10px);
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, .7));
 }

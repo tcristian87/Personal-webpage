@@ -1,19 +1,15 @@
 <mat-nav-list>
     <a mat-list-item  (click)="onSidenavClose()" (click)="toHome()">
-        <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
+        <span class="nav-caption">Home</span>
     </a>
-    <a mat-list-item  (click)="onSidenavClose()" (click)="toResume()">
-        <mat-icon>assigment_ind</mat-icon> <span class="nav-caption">About</span>
+    <a mat-list-item  (click)="onSidenavClose()" (click)="toAbout()">
+         <span class="nav-caption">About</span>
     </a>
+    <a mat-list-item (click)="onSidenavClose()" (click)="toResume()">
+        <span class="nav-caption">Resume</span>
+    </a>
+
     <a mat-list-item (click)="onSidenavClose()" (click)="toContact()">
-        <mat-icon>account_balance</mat-icon><span class="nav-caption">Contact</span>
+       <span class="nav-caption">Contact</span>
     </a>
-    <mat-list-item [matMenuTriggerFor]="menu">
-        <mat-icon>unfold_more</mat-icon>
-        <a matline>Example</a>
-    </mat-list-item>
-    <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="onSidenavClose()"> View Profile</button>
-    <button mat-menu-item (click)="onSidenavClose()">Add contact</button>
-    </mat-menu>
 </mat-nav-list>
