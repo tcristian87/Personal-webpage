@@ -11,12 +11,14 @@
 
 .about-align-content {
     margin-left: 10%;
-    padding-top: 5%;
+    padding-top: 3%;
 }
 .about-text-content{
     font-size: 24px;
     width: 60%;
     height: 20%;
+    line-height: 2;
+
 }
 .backgorund-image {
     background-image: url("do something great.jpg");

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
-import { WeatherService } from '../../weather.service';
+import { WeatherService } from '../../services/weather.service';
 import Typewriter from 't-writer.js';
-
-
 
 @Component({
   selector: 'app-weather',
@@ -15,8 +13,7 @@ export class WeatherComponent implements OnInit {
   lon: number |undefined;
   weather: any;
 
-  constructor(private weatherService: WeatherService) {
-  }
+  constructor(private weatherService: WeatherService) { }
 
   today:string = moment().format('DD/MM/YYYY');
 
@@ -48,10 +45,12 @@ export class WeatherComponent implements OnInit {
           this.lon= succes.coords.longitude;
         this.weatherService.getWeatherDataByCoords(this.lat, this.lon ).subscribe(data=>{
           this.weather = data;
+          console.log(data)
         })
       })
     }
-
      }
  
 }
+
+

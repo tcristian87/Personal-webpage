@@ -18,6 +18,7 @@ export class ResumeComponent implements OnInit {
       this.resume=data;
       console.log(this.resume)
     })
+    
   }
   public executeSelectedChange = (_event: any) => {};
 

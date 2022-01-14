@@ -34,12 +34,21 @@ ul li{
     position: fixed; 
 }
 
-/* .arrow_variable {
+/* .arrow2 {
+  right: 10%;
+  bottom: 10%;
+  width: 40px;
+  height: 40px;
   transform: rotate(225deg);
+  border-left: 5px #ED1D7A solid;
+  border-top: 5px #ED1D7A solid;
+  border-right: none;
+  border-bottom: none;
+  background: none;
 } */
 
-.arrow,
-.arrow_variable {
+
+.arrow {
   right: 10%;
   bottom: 10%;
   width: 40px;

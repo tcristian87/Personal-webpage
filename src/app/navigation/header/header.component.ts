@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +9,9 @@ export class HeaderComponent implements OnInit {
   
   @Output() public sidenavToggle = new EventEmitter();
 
+
   constructor() { }
   toHome(){
-
     document.getElementById("home")?.scrollIntoView({behavior: "smooth", block: "start"});
   }
   toAbout(){
@@ -29,14 +29,5 @@ export class HeaderComponent implements OnInit {
     this.sidenavToggle.emit();
   }
 
-//   arrow=false;
-//   @HostListener("document:scroll")
-//   scrollfunction(){
-//     if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
-//     this.arrow=true;
-//   } else {
-//     this.arrow=false;
-//   }
-// }
-
+  
 }

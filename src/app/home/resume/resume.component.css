@@ -4,51 +4,49 @@
 }
 
 .experience-content {
+  overflow: hidden;
+  padding-right: 30%;
   height: 100vh;
-  width: 60vw;
+  width: 80vw;
 }
 
 .resume-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-left: 10%;
-  width: 60vw;
+  width: 90vw;
 }
-  .resume-content2 {
-    display: flex;
-    justify-content:center;
-    height: 100%;
- 
-  }
-  .edit-button {
-   display:flex;
-   justify-content: flex-end;
-  }
-  .resume-right-side {
-    width: 70%;
-  }
-  .resume-left-side {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-    width: 40%;
-    background-color: #1A5389;
-    color: white;
-  }
 
-  h3{
-    color: #396EB0;
-  }
+.resume-content2 {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
 
-  .radio-input td{
-    padding: 10px;
-  }
+.resume-right-side {
+  width: 70%;
+}
+
+.resume-left-side {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  background-color: #1a5389;
+  color: white;
+}
+
+h3 {
+  color: #396eb0;
+}
+
+.radio-input td {
+  padding: 10px;
+}
 
 .image {
-    padding-top: 50px;
-    
+  padding-top: 50px;
 }
 .resume-img {
   width: 100%;
@@ -56,33 +54,140 @@
   border-radius: 50%;
 }
 .resume-right-side {
-  display: flex; 
-  justify-content:flex-start;
+  display: flex;
+  justify-content: flex-start;
   flex-direction: column;
 }
 div.resume-right-side {
-  padding: 10%; 
+  padding: 10%;
 }
 .box {
   margin-bottom: 50px;
 }
 a {
   text-decoration: none;
-  color: white
+  color: white;
 }
 
 /* cards resume with hover effect */
-
-.card {
-  transition: all .1s ease-out 0s;
-  /* transform: translateY(0); */
-	width: 600px;
-  height: 300px;
-   }
-.weather-img {
-  background-size: auto;
+.row {
+  max-width: 60vw;
+  min-width: 60vw;
+  margin: 50px auto 0;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
-.card:hover {
-  transform: translateY(10px);
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, .7));
+.card {
+  float: left;
+  padding: 0 1.7rem;
+  width: 50%;
+}
+
+/* animation effect */
+
+.marquee:before,
+marquee:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  content: "";
+  z-index: 1;
+}
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, #111 0%, transparent 100%);
+}
+.marquee-content {
+  animation: scrolling 10s linear infinite;
+}
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-180vw);
+  }
+}
+
+/* cards content ant css */
+
+.card .wrapper {
+  background-color: #fff;
+  min-height: 540px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+.card .wrapper:hover .data {
+  transform: translateY(0);
+}
+.card .data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(calc(70px + 1em));
+  transition: transform 0.3s;
+}
+.card .data .content {
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+}
+.card .author {
+  font-size: 12px;
+}
+.card .title {
+  margin-top: 10px;
+}
+.card .text {
+  height: 70px;
+  margin: 0;
+}
+.card1-img .wrapper {
+  background: url("weather-app.jpg") center/cover no-repeat;
+}
+
+.card2-img .wrapper {
+  background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg)
+    center/cover no-repeat;
+}
+.example-2 .data {
+  color: #fff;
+  transform: translateY(calc(70px + 4em));
+}
+.example-2 .title a {
+  color: #fff;
+}
+.example-2 .button {
+  display: block;
+  width: 100px;
+  margin: 2em auto 1em;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1;
+  position: relative;
+  font-weight: 700;
+}
+.example-2 .button::after {
+  content: "→";
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+.example-2 .button:hover::after {
+  transform: translate(5px, -50%);
+  opacity: 1;
 }
