@@ -21,6 +21,8 @@
   display: flex;
   justify-content: center;
   height: 100%;
+  border:solid rgba(0, 0, 0, 0.1);
+  width: 80%;
 }
 
 .resume-right-side {
@@ -151,19 +153,24 @@ a {
   position: relative;
   z-index: 1;
 }
+@media(max-width: 959px){
+ .data .content {
+    font-size: 30px;
+    
+  }
+} 
 .card .author {
   font-size: 12px;
-  font-size: 2vw;
 }
 .card .title {
   margin-top: 10px;
-  font-size: 4vw;
 }
+
 .card .text {
   height: 70px;
   margin: 0;
-  font-size: 1.6vw;
 }
+
 .card1-img .wrapper {
   background: url("weather-app.jpg") center/cover no-repeat;
 }

@@ -10,8 +10,7 @@ export class SidenavListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   public onSidenavClose = () => {
     this.sidenavClose.emit();
   }
@@ -27,4 +26,5 @@ export class SidenavListComponent implements OnInit {
   toContact() {
     document.getElementById("contact")?.scrollIntoView({behavior: "smooth", block: "center"});
   }
+ 
 }

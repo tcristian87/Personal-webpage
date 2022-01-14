@@ -23,8 +23,8 @@
       </li>
     </ul>
   </div>
-  <!--(scroll)='onWindowScroll()'  -->
-  <div><button  class="arrow arrow2" (click)="toHome()"></button></div>
+  
+  <div><button [ngClass]="downArrow?'arrow': 'arrow2'" (click)="toHome()"></button></div>
 </mat-toolbar>
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Resume } from 'src/app/services/resume';
 import { ResumeService } from 'src/app/services/resume.service';
 
@@ -8,17 +8,15 @@ import { ResumeService } from 'src/app/services/resume.service';
   styleUrls: ['./resume.component.css'],
 })
 export class ResumeComponent implements OnInit {
-
   resume: Resume[] = [];
 
   constructor(public resumeService: ResumeService) {}
 
   ngOnInit(): void {
-    this.resumeService.getAll().subscribe((data: Resume[])=>{
-      this.resume=data;
-      console.log(this.resume)
-    })
-    
+    this.resumeService.getAll().subscribe((data: Resume[]) => {
+      this.resume = data;
+      console.log(this.resume);
+    });
   }
   public executeSelectedChange = (_event: any) => {};
 

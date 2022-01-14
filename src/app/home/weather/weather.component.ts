@@ -6,51 +6,47 @@ import Typewriter from 't-writer.js';
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.css']
+  styleUrls: ['./weather.component.css'],
 })
 export class WeatherComponent implements OnInit {
-  lat: number |undefined;
-  lon: number |undefined;
+  lat: number | undefined;
+  lon: number | undefined;
   weather: any;
 
-  constructor(private weatherService: WeatherService) { }
+  constructor(private weatherService: WeatherService) {}
 
-  today:string = moment().format('DD/MM/YYYY');
-
+  today: string = moment().format('DD/MM/YYYY');
 
   ngOnInit(): void {
-    this.getLocation()
-    const target = document.querySelector('.tw')
+    this.getLocation();
+    const target = document.querySelector('.tw');
     const writer = new Typewriter(target, {
-      loop: true, 
+      loop: true,
       typeColor: 'white',
-      cursorColor: 'white'
-    })
-    
+      cursorColor: 'white',
+    });
+
     writer
       .strings(
         400,
-        "Web Developer",
-        "Front-End Developer", 
-        "Programming addicted"
+        'Web Developer',
+        'Front-End Developer',
+        'Programming addicted'
       )
-       .start()
-       
+      .start();
   }
-  
-     getLocation(){
-      if("geolocation" in navigator) {
-        navigator.geolocation.watchPosition((succes)=> {
-          this.lat = succes.coords.latitude; 
-          this.lon= succes.coords.longitude;
-        this.weatherService.getWeatherDataByCoords(this.lat, this.lon ).subscribe(data=>{
-          this.weather = data;
-          console.log(data)
-        })
-      })
+  getLocation() {
+    if ('geolocation' in navigator) {
+      navigator.geolocation.watchPosition((succes) => {
+        this.lat = succes.coords.latitude;
+        this.lon = succes.coords.longitude;
+        this.weatherService
+          .getWeatherDataByCoords(this.lat, this.lon)
+          .subscribe((data) => {
+            this.weather = data;
+            console.log(this.weather);
+          });
+      });
     }
-     }
- 
+  }
 }
-
-
