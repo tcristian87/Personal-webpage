@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 10%;
-  width: 90vw;
+  width: 80vw;
 }
 
 .resume-content2 {
@@ -79,16 +79,23 @@ a {
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
+
 .card {
   float: left;
   padding: 0 1.7rem;
   width: 50%;
 }
 
+@media(max-width: 959px){
+  .card{
+  width: 80vw;
+  }
+}
 /* animation effect */
 
 .marquee:before,
-marquee:after {
+.marquee:after {
   position: absolute;
   top: 0;
   width: 10rem;
@@ -123,10 +130,12 @@ marquee:after {
 .card .wrapper {
   background-color: #fff;
   min-height: 540px;
+  max-width: 540px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
 }
+
 .card .wrapper:hover .data {
   transform: translateY(0);
 }
@@ -144,13 +153,16 @@ marquee:after {
 }
 .card .author {
   font-size: 12px;
+  font-size: 2vw;
 }
 .card .title {
   margin-top: 10px;
+  font-size: 4vw;
 }
 .card .text {
   height: 70px;
   margin: 0;
+  font-size: 1.6vw;
 }
 .card1-img .wrapper {
   background: url("weather-app.jpg") center/cover no-repeat;
