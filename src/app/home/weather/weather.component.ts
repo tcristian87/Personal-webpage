@@ -13,12 +13,13 @@ export class WeatherComponent implements OnInit {
   lon: number | undefined;
   weather: any;
 
+  allowlocation= false;
+
   constructor(private weatherService: WeatherService) {}
 
-  today: string = moment().format('DD/MM/YYYY');
+  today: string = moment().format('MMMM Do YYYY, h:mm:ss a');
 
   ngOnInit(): void {
-    this.getLocation();
     const target = document.querySelector('.tw');
     const writer = new Typewriter(target, {
       loop: true,
@@ -34,6 +35,7 @@ export class WeatherComponent implements OnInit {
         'Programming addicted'
       )
       .start();
+      this.getLocation();
   }
   getLocation() {
     if ('geolocation' in navigator) {
@@ -42,11 +44,11 @@ export class WeatherComponent implements OnInit {
         this.lon = succes.coords.longitude;
         this.weatherService
           .getWeatherDataByCoords(this.lat, this.lon)
-          .subscribe((data) => {
-            this.weather = data;
+          .subscribe((data) => this.weather = data)
+          this.allowlocation = true
             console.log(this.weather);
           });
-      });
+      }
     }
+    
   }
-}

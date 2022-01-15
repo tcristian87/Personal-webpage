@@ -2,6 +2,11 @@
     color: #fff;
     font-size: 54px;
 }
+@media(max-width: 600px) {
+    .title {
+        font-size: 2rem
+    }
+}
 .about-content {
     height: 100vh;
     color: white;
@@ -19,7 +24,14 @@
     width: 60%;
     height: 20%;
     line-height: 2;
-
+}
+@media (max-width: 700px) {
+    .about-text-content{
+        color:rgb(2, 169, 234);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
 }
 .backgorund-image {
     background-image: url("do something great.jpg");

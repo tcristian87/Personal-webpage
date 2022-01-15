@@ -8,7 +8,6 @@ import { Component, OnInit, Output, EventEmitter, Inject, HostListener } from '@
 })
 export class HeaderComponent implements OnInit {
   scrolled: boolean = false;
-  arrow: any;
 
   @Output() public sidenavToggle = new EventEmitter();
 
@@ -45,9 +44,15 @@ export class HeaderComponent implements OnInit {
   onWindowScroll() {
     if (document.body.scrollTop > 0 ||     
     document.documentElement.scrollTop > 0) {
-    this.downArrow = false
-    } else {
+    this.downArrow = false;
+     } else {
      this.downArrow = true;
     } 
   }
+
+  arrowScroll(){
+    this.downArrow? this.toAbout(): this.toHome()
+    }
 }
+
+

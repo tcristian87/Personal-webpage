@@ -47,7 +47,7 @@ ul li{
   border-right: none;
   border-bottom: none;
   background: none;
-  transition: all 1s linear;
+  transition: all 0.5s linear;
 }
 
 
@@ -62,7 +62,7 @@ ul li{
   border-right: none;
   border-bottom: none;
   background: none;
-  transition: all 1s linear;
+  transition: all 0.5s linear;
 } 
 
 .arrow:before,
@@ -86,6 +86,6 @@ ul li{
   }
   100% {
     opacity: 0;
-    transform: translate(-15px, -15px);
+    transform: translate(-20px, -20px);
   }
 }

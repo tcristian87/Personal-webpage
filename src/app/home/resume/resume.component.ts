@@ -15,7 +15,7 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
     this.resumeService.getAll().subscribe((data: Resume[]) => {
       this.resume = data;
-      console.log(this.resume);
+      // console.log(this.resume);
     });
   }
   public executeSelectedChange = (_event: any) => {};

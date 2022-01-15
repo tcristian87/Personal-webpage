@@ -1,27 +1,35 @@
-.home-weather-content{
+.home-weather-content {
   height: 100vh;
   color: white;
-  display:flex;
-  flex-direction: column;
-  justify-content: top;
 }
-.home-weather-content{
+.weather-content2 {
+  display: none;
+}
+.weather-content {
+  padding: 50px;
+}
+
+.home-weather-content {
   background-image: url("1947484.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right bottom, left top;
-  
-}
-.home-content {
-  margin-left: 10%;
-  margin-right: auto;
-}
-.weather-content {
-  padding-top: 20%;
-margin-left: auto ; 
 }
 
-h1{
+h1 {
   font-size: 54px;
 }
-
+.align-weather-home {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+@media(max-width: 600px){
+  .tw{
+    font-size: 2rem;
+  }
+  
+}
