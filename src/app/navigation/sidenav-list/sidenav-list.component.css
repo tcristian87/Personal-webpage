@@ -11,3 +11,6 @@ a:hover, a:active{
     display: inline-block;
     padding-left: 6px;
 }
+.mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
+    color: #f818b5;
+}

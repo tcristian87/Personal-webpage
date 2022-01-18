@@ -18,9 +18,8 @@ import { AboutComponent } from './home/about/about.component';
 import { ResumeComponent } from './home/resume/resume.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { FooterComponent } from './navigation/footer/footer.component';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { HorizontalscrollDirective } from './services/horizontalscroll.directive';
 
 @NgModule({
   declarations: [
@@ -34,20 +33,21 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     ResumeComponent,
     ContactComponent,
     FooterComponent,
+    HorizontalscrollDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
     RoutingModule,
     HttpClientModule,
     MatProgressBarModule,
-    FormsModule
-
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

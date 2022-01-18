@@ -4,7 +4,7 @@
       <h2 class="text-center mb-5">Contact Me</h2>
       <div class="row">
         <div class="col-md-6 offset-md-3">
-          <form
+          <form 
             (ngSubmit)="submitForm()"
             #contactForm="ngForm"
             action="https://formsubmit.co/a6748cd73b7117e28617c38996610257"
@@ -22,7 +22,7 @@
                 required
                 email
               />
-              <div 
+              <div
                 class="help is-error mb-4"
                 *ngIf="emailInput.invalid && emailInput.touched"
               >
@@ -33,7 +33,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  name="fullname"
+                  name="name"
                   [(ngModel)]="name"
                   #nameInput="ngModel"
                   required
@@ -50,6 +50,7 @@
                 <textarea
                   class="form-control"
                   name="comment"
+                  [(ngModel)]="comment"
                   placeholder="Enter your text here"
                   rows="5"
                   required
@@ -58,7 +59,7 @@
               <button
                 type="submit"
                 class="btn btn-primary"
-                [disabled]="contactForm.invalid"
+                [disabled]="!contactForm.valid"
               >
                 Submit
               </button>
