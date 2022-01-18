@@ -130,11 +130,12 @@
 .card2-img .wrapper {
   background: url("actors-list.jpg") center/cover no-repeat;
 }
-.card2 {
-  color: #111;
+.card3-img .wrapper {
+  background: url("rock-scrissors-paper.jpg") center/cover no-repeat;
 }
 
 .example-2 .data {
+  background: rgba(0, 0, 0, 0.4); ;
   color: #fff;
   transform: translateY(calc(150px + 1em));
 }
