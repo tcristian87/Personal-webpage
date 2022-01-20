@@ -13,7 +13,7 @@ export class WeatherComponent implements OnInit {
   lon: number | undefined;
   weather: any;
 
-  allowlocation= false;
+  allowlocation = false;
 
   constructor(private weatherService: WeatherService) {}
 
@@ -35,7 +35,7 @@ export class WeatherComponent implements OnInit {
         'Programming addicted'
       )
       .start();
-      this.getLocation();
+    this.getLocation();
   }
   getLocation() {
     if ('geolocation' in navigator) {
@@ -44,11 +44,10 @@ export class WeatherComponent implements OnInit {
         this.lon = succes.coords.longitude;
         this.weatherService
           .getWeatherDataByCoords(this.lat, this.lon)
-          .subscribe((data) => this.weather = data)
-          this.allowlocation = true
-            console.log(this.weather);
-          });
-      }
+          .subscribe((data) => (this.weather = data));
+        this.allowlocation = true;
+        console.log(this.weather);
+      });
     }
-    
   }
+}

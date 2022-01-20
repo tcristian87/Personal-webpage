@@ -1,26 +1,22 @@
-<div class="home-weather-content" id='home'> 
+<div class="home-weather-content" id="home">
   <div class="align-weather-home">
-  <div [ngClass]="allowlocation?'weather-content':'weather-content2'">
-     {{weather?.name}} 
+    <div [ngClass]="allowlocation ? 'weather-content' : 'weather-content2'">
+      {{ weather?.name }}
       <img
         src="http://openweathermap.org/img/wn/{{
-         this.weather?.weather[0].icon
+          this.weather?.weather[0].icon
         }}@2x.png"
       />
-    <div>{{ weather?.main.temp }}&#176;C</div>
-    <div>
-      {{ weather?.weather[0].description | titlecase }}
+      <div>{{ weather?.main.temp }}&#176;C</div>
+      <div>
+        {{ weather?.weather[0].description | titlecase }}
+      </div>
+    </div>
+    <div class="home-content">
+      <h1>Cristian TOMA</h1>
+      <h2><span class="tw"></span></h2>
+      <h2>Welcome to my website</h2>
+      <div>Today is {{ today }}</div>
     </div>
   </div>
-  <div class="home-content">
-  <h1>Cristian TOMA</h1><h2><span class="tw"></span></h2>
-     <h2>
-    Welcome to my website
-  </h2> 
-   <div>Today is {{ today }}</div>
 </div>
-</div>
-</div>
-
-
-

@@ -1,4 +1,3 @@
-import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject, OnInit } from '@angular/core';
 
 @Component({
@@ -12,6 +11,4 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {}
 
   public executeSelectedChange = (event: any) => {};
-
-
 }

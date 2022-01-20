@@ -1,6 +1,10 @@
 .home-weather-content {
   height: 100vh;
   color: white;
+  background-image: url("1947484.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom, left top;
 }
 .weather-content2 {
   display: none;
@@ -9,27 +13,19 @@
   padding: 50px;
 }
 
-.home-weather-content {
-  background-image: url("1947484.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right bottom, left top;
-}
-
 h1 {
   font-size: 54px;
 }
 .align-weather-home {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   min-height: 100vh;
 }
-@media(max-width: 600px){
-  .tw{
+@media (max-width: 600px) {
+  .tw {
     font-size: 2rem;
   }
-  
 }

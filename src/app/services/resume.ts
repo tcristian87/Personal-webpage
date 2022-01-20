@@ -1,3 +1,3 @@
 export interface Resume {
-    body: string;
+  body: string;
 }

@@ -1,5 +1,12 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, OnInit, Output, EventEmitter, Inject, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  Inject,
+  HostListener,
+} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -38,21 +45,18 @@ export class HeaderComponent implements OnInit {
     this.sidenavToggle.emit();
   };
 
-  downArrow=true;
+  downArrow = true;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    if (document.body.scrollTop > 0 ||     
-    document.documentElement.scrollTop > 0) {
-    this.downArrow = false;
-     } else {
-     this.downArrow = true;
-    } 
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+      this.downArrow = false;
+    } else {
+      this.downArrow = true;
+    }
   }
 
-  arrowScroll(){
-    this.downArrow? this.toAbout(): this.toHome()
-    }
+  arrowScroll() {
+    this.downArrow ? this.toAbout() : this.toHome();
+  }
 }
-
-

@@ -1,34 +1,30 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { catchError, throwError } from 'rxjs';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ResumeService {
+  private apiURL = 'http://localhost:3000';
 
-  private apiURL="http://localhost:3000"
-
-
-  constructor(private httpResume: HttpClient) { }
+  constructor(private httpResume: HttpClient) {}
 
   getAll(): Observable<any> {
-    return this.httpResume.get(this.apiURL + '/resume/')
+    return this.httpResume
+      .get(this.apiURL + '/resume/')
 
-  .pipe (
-    catchError(this.errorHandler)
-  )
+      .pipe(catchError(this.errorHandler));
   }
 
-  errorHandler(error:any) {
+  errorHandler(error: any) {
     let errorMessage = '';
-    if(error.error instanceof ErrorEvent) {
+    if (error.error instanceof ErrorEvent) {
       errorMessage = error.error.message;
     } else {
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
     return throwError(errorMessage);
- }
+  }
 }

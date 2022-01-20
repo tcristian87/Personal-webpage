@@ -45,7 +45,6 @@ import { HorizontalscrollDirective } from './services/horizontalscroll.directive
     RoutingModule,
     HttpClientModule,
     MatProgressBarModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent],

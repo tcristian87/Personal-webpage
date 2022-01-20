@@ -1,30 +1,31 @@
 a {
-    text-decoration: none;  
+  text-decoration: none;
 }
 
-a:hover, a:active{
-    color: gray;
+a:hover,
+a:active {
+  color: gray;
 }
 
-.navigation-items{
-    list-style-type: none;
+.navigation-items {
+  list-style-type: none;
 }
 
-mat-toolbar{
-    border-radius: 3px;
-    position: absolute; 
-    z-index: 5; 
-    background: none;
+mat-toolbar {
+  border-radius: 3px;
+  position: absolute;
+  z-index: 5;
+  background: none;
 }
 
-@media(max-width: 959px){
-    mat-toolbar{
-        border-radius: 0px;
-        position: fixed;
-    }
+@media (max-width: 959px) {
+  mat-toolbar {
+    border-radius: 0px;
+    position: fixed;
+  }
 }
-ul li{
-    right: 30px;
+ul li {
+  right: 30px;
 }
 
 /* arrow css */
@@ -33,7 +34,7 @@ ul li{
 .arrow2,
 .arrow2:before,
 .arrow:before {
-    position: fixed; 
+  position: fixed;
 }
 
 .arrow {
@@ -42,28 +43,27 @@ ul li{
   width: 40px;
   height: 40px;
   transform: rotate(225deg);
-  border-left: 5px #ED1D7A solid;
-  border-top: 5px #ED1D7A solid;
+  border-left: 5px #ed1d7a solid;
+  border-top: 5px #ed1d7a solid;
   border-right: none;
   border-bottom: none;
   background: none;
   transition: all 0.5s linear;
 }
 
-
- .arrow2 {
+.arrow2 {
   right: 10%;
   bottom: 10%;
   width: 40px;
   height: 40px;
   transform: rotate(45deg);
-  border-left: 5px #ED1D7A solid;
-  border-top: 5px #ED1D7A solid;
+  border-left: 5px #ed1d7a solid;
+  border-top: 5px #ed1d7a solid;
   border-right: none;
   border-bottom: none;
   background: none;
   transition: all 0.5s linear;
-} 
+}
 
 .arrow:before,
 .arrow2::before {
@@ -71,8 +71,8 @@ ul li{
   width: 20px;
   height: 20px;
   margin: auto;
-  border-left: 3px #ED1D7A solid;
-  border-top: 3px #ED1D7A solid;
+  border-left: 3px #ed1d7a solid;
+  border-top: 3px #ed1d7a solid;
   border-right: none;
   border-bottom: none;
   animation-duration: 2s;
