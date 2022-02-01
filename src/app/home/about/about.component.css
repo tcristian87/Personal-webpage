@@ -8,7 +8,7 @@
   color: white;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right bottom, left top;  
+  background-position: right bottom, left top;
   background-image: url("about.jpg");
 }
 
@@ -33,9 +33,9 @@
     width: 90%;
   }
 }
-@media (max-height: 700px) {
+@media (max-height: 600px) {
   .title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .about-text-content {
     font-size: 1.5rem;

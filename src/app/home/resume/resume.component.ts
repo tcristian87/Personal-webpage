@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Resume } from 'src/app/services/resume';
 import { ResumeService } from 'src/app/services/resume.service';
 

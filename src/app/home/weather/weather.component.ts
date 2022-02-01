@@ -20,6 +20,7 @@ export class WeatherComponent implements OnInit {
   today: string = moment().format('MMMM Do YYYY, h:mm:ss a');
 
   ngOnInit(): void {
+   this.getLocation();
     const target = document.querySelector('.tw');
     const writer = new Typewriter(target, {
       loop: true,
@@ -35,7 +36,6 @@ export class WeatherComponent implements OnInit {
         'Programming addicted'
       )
       .start();
-    this.getLocation();
   }
   getLocation() {
     if ('geolocation' in navigator) {
@@ -46,7 +46,6 @@ export class WeatherComponent implements OnInit {
           .getWeatherDataByCoords(this.lat, this.lon)
           .subscribe((data) => (this.weather = data));
         this.allowlocation = true;
-        console.log(this.weather);
       });
     }
   }

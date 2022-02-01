@@ -3,10 +3,7 @@
     <div [ngClass]="allowlocation ? 'weather-content' : 'weather-content2'">
       {{ weather?.name }}
       <img
-        src="http://openweathermap.org/img/wn/{{
-          this.weather?.weather[0].icon
-        }}@2x.png"
-      />
+        src="http://openweathermap.org/img/wn/{{weather?.weather[0].icon}}@2x.png"/>
       <div>{{ weather?.main.temp }}&#176;C</div>
       <div>
         {{ weather?.weather[0].description | titlecase }}
