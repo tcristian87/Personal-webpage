@@ -5,6 +5,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right bottom, left top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
 }
 .weather-content2 {
   display: none;
@@ -22,10 +26,20 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
 }
 @media (max-width: 600px) {
-  .tw {
+  .tw .h1{
+    font-size: 1rem;
+  }
+  .align-weather-home {
     font-size: 2rem;
+  }
+}
+@media (max-height: 600px) {
+  .align-weather-home {
+    font-size: 1rem;
+  }
+  .tw .h1{
+    font-size: 1rem;
   }
 }
