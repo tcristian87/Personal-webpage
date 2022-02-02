@@ -39,12 +39,4 @@
     width: 90%;
   }
 }
-@media (max-height: 700px) {
-  .title {
-    font-size: 2rem;
-  }
-  .about-text-content {
-    font-size: 1rem;
-    width: 90%;
-   }
-}
+

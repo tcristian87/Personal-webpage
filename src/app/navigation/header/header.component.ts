@@ -7,6 +7,7 @@ import {
   Inject,
   HostListener,
 } from '@angular/core';
+import smoothscroll from 'smoothscroll-polyfill';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,7 @@ export class HeaderComponent implements OnInit {
 
   @Output() public sidenavToggle = new EventEmitter();
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(@Inject(DOCUMENT) private document: Document) { }
   toHome() {
     document
       .getElementById('home')
@@ -40,9 +41,10 @@ export class HeaderComponent implements OnInit {
       ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
+    smoothscroll.polyfill();
   };
 
   downArrow = true;

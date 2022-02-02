@@ -222,7 +222,7 @@
   display: flex;
   flex: 0 0 100px;
   flex-direction: row;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow: hidden;
   flex-wrap: nowrap;
   grid-gap: 20px;
@@ -257,6 +257,7 @@
   position: relative;
   border-right: solid rgba(0, 0, 0, 0.2) 1px;
 }
+
 .fixed-card {
   z-index: 1;
   position: absolute;
