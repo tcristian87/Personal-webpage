@@ -9,10 +9,11 @@ export class ContactComponent implements OnInit {
   name!: string;
   email!: string;
   comment!: string;
+  myform: any;
 
   constructor() { }
 
   ngOnInit() { }
-}
+ }
 
 

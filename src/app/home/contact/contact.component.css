@@ -1,6 +1,11 @@
 .container {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center; */
-  height: 60vh;
+  justify-content: center;
+  height: 80vh;
+}
+@media (max-width: 1000px) {
+  .container {
+    height: 70vh;
+  }
 }
