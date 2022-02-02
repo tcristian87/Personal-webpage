@@ -31,6 +31,7 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     MatMenuModule,
     MatCardModule,
+
   ],
 })
 export class MaterialModule {}
