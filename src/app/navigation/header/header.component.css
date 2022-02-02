@@ -9,6 +9,7 @@ a:active {
 
 .navigation-items {
   list-style-type: none;
+  scroll-behavior: smooth;
 }
 
 mat-toolbar {
