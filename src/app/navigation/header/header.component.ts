@@ -30,16 +30,16 @@ export class HeaderComponent implements OnInit {
       .getElementById('about')
       ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-  toResume() {
-    document
-      .getElementById('resume')
-      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-  toContact() {
-    document
-      .getElementById('contact')
-      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+  // toResume() {
+  //   document
+  //     .getElementById('resume')
+  //     ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // }
+  // toContact() {
+  //   document
+  //     .getElementById('contact')
+  //     ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // }
 
   ngOnInit(): void { }
   public onToggleSidenav = () => {
