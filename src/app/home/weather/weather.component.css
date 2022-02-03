@@ -27,19 +27,19 @@ h1 {
   align-items: center;
   text-align: center;
 }
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .tw .h1{
     font-size: 1rem;
   }
   .align-weather-home {
     font-size: 2rem;
   }
-}
-@media (max-height: 600px) {
+} */
+/* @media (max-height: 600px) {
   .align-weather-home {
     font-size: 1rem;
   }
   .tw .h1{
     font-size: 1rem;
   }
-}
+} */

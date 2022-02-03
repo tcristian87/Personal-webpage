@@ -1,68 +1,72 @@
-
 <div class="container" id="contact">
-  <h1>Contact Me</h1>
-  <form
-    ngNoForm
-    action="https://formsubmit.co/a6748cd73b7117e28617c38996610257 "
-    method="POST"
-  >
-    <div class="form-group">
-      <div class="form-row">
-        <div class="col">
-          <input
-            type="text"
-            name="name"
-            class="form-control"
-            placeholder="Full Name"
-            [(ngModel)]="name"
-            #nameInput="ngModel"
-            required
-          />
-          <div
-            class="help is-error mb-4"
-            *ngIf="nameInput.invalid && nameInput.touched"
-          >
-            Enter your name!
+    <h1>Contact Me</h1>
+      <form
+        ngNoForm
+        action="https://formsubmit.co/a6748cd73b7117e28617c38996610257 "
+        method="POST"
+      >
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Full Name"
+                [(ngModel)]="name"
+                #nameInput="ngModel"
+                required
+              />
+              <div
+                class="help is-error mb-4"
+                *ngIf="nameInput.invalid && nameInput.touched"
+              >
+                Enter your name!
+              </div>
+            </div>
+            <div class="col">
+              <input
+                [(ngModel)]="email"
+                #emailInput="ngModel"
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Email Address"
+                required
+              />
+              <div
+                class="help is-error mb-4"
+                *ngIf="emailInput.invalid && emailInput.touched"
+              >
+                Enter your email adress!
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col">
-          <input
-            [(ngModel)]="email"
-            #emailInput="ngModel"
-            type="email"
-            name="email"
+        <div class="form-group">
+          <textarea
+            [(ngModel)]="comment"
+            #commentInput="ngModel"
+            placeholder="Enter your text here"
             class="form-control"
-            placeholder="Email Address"
+            name="message"
+            rows="10"
             required
-          />
+          ></textarea>
           <div
             class="help is-error mb-4"
-            *ngIf="emailInput.invalid && emailInput.touched"
+            *ngIf="commentInput.invalid && commentInput.touched"
           >
-            Enter your email adress!
+            You must complete al the inputs!
           </div>
         </div>
-      </div>
+        <button
+          [disabled]="
+            !emailInput.valid || !nameInput.valid || !commentInput.valid
+          "
+          class="btn btn-lg btn-dark btn-block"
+        >
+          Submit Form
+        </button>
+      </form>
     </div>
-    <div class="form-group">
-      <textarea
-        [(ngModel)]="comment"
-        #commentInput="ngModel"
-        placeholder="Enter your text here"
-        class="form-control"
-        name="message"
-        rows="10"
-        required
-      ></textarea>
-      <div
-      class="help is-error mb-4"
-      *ngIf="commentInput.invalid && commentInput.touched"
-    >
-    You must complete al the inputs!
-    </div>
-    </div>
-    <button [disabled]="!emailInput.valid || !nameInput.valid || !commentInput.valid" class="btn btn-lg btn-dark btn-block">
-      Submit Form
-    </button>
-  </form>
-</div>
