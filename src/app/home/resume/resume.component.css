@@ -14,13 +14,8 @@
   height: 80vh;
   width: 100%;
 }
-@media( max-height: 595px){
-  .experience-content {
-    height: 400px;
-    overflow: scroll;
-  }
-}
-@media (max-height: 855px) {
+
+@media (max-height: 1024px) {
   .experience-content {
     overflow: scroll;
   }
@@ -35,25 +30,25 @@
 /* **************************** */
 /* CARDS RESUME WHIT HOVER EFECT */
 .row {
-  max-width: 60vw;
-  min-width: 60vw;
-  margin: 50px auto 0;
+   margin: 15px auto 0;
   align-items: stretch;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
-
+@media (max-width: 400px) {
+  .row {
+    margin: 5px auto 0;
+  }
+  .card {
+    width: 400px;
+  }
+}
 .card {
   float: left;
   padding: 0 1.7rem;
   width: 500px;
 }
-/* @media (min-height: 793px) {
-  .resume-content {
-    height: 1rem;
-  }
-  } */
 
 /* ****************************** */
 /* ANIMATION EFFECT */
@@ -74,8 +69,8 @@
   right: 0;
   background: linear-gradient(to left, #111 0%, transparent 100%);
 }
-.marquee-content {
-  animation: scrolling 10s linear infinite;
+ .marquee-content {
+   animation: scrolling 10s linear infinite;
 }
 .marquee-content:hover {
   animation-play-state: paused;
@@ -114,6 +109,7 @@
   position: relative;
   z-index: 1;
 }
+
 @media (max-width: 700px) {
   .content .title {
     font-size: 1rem;
@@ -128,6 +124,17 @@
 @media (min-width: 500px) {
   .example-2 {
     width: 400px;
+  }
+}
+@media (max-height: 700px) {
+  .card .wrapper {
+    min-height: 400px;
+  }
+}
+
+@media (max-height: 400px) {
+  .card .wrapper {
+    min-height: 300px;
   }
 }
 
@@ -163,15 +170,21 @@
 
 .flex-wrapper {
   display: flex;
+  justify-content: start;
   flex-flow: row nowrap;
-  margin-left: 22%;
+
   margin-top: 15%;
 }
-
+@media(max-width: 400) {
+  .flex-wrapper {
+    margin: 1px;
+  }
+}
 .single-chart {
   width: 20%;
   justify-content: space-around;
 }
+
 
 .circular-chart {
   display: block;
@@ -203,6 +216,12 @@
   font-size: 0.5em;
   text-anchor: middle;
 }
+@media( max-width: 450px) {
+  .flex-wrapper {
+ display: flex;
+ align-content: space-between;
+  }
+ }
 
 /* *************************** */
 /* CARDS-RESUME */
@@ -219,9 +238,9 @@
   margin-top: 50px;
   width: 100%;
 }
-@media(max-width: 500px) {
+@media (max-width: 1100px) {
   .resume-cards {
-    overflow: scroll;
+    overflow: hidden;
   }
 }
 
@@ -251,14 +270,42 @@
   position: relative;
   border-right: solid rgba(0, 0, 0, 0.2) 1px;
 }
-
 .fixed-card {
   z-index: 1;
   position: absolute;
   background-color: #fafafa;
-  height: 90%;
-  width: 20%;
+  height: 150px;
+  width: 30%;
+}
+ .first-card {
+  margin-left: 40%;
+}
+@media(max-width: 440px) {
+  .resume-cards-width {
+  min-width: 150px;
+  }
+  .first-card {
+    margin-left: 160px;
+  }
+  .fixed-card {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media(max-height: 400px) {
+.resume-content2 {
+height: 600px;
 }
 .first-card {
-  margin-left: 22%;
+  margin-left: 240px;
+}
+.resume-content {
+  margin-left: 80px;
+}
+.fixed-card {
+  position: absolute;
+  height: 150px;
+
+}
+
 }
