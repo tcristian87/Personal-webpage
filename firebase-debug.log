@@ -1,20 +1,21 @@
-[debug] [2022-02-10T22:54:25.615Z] ----------------------------------------------------------------------
-[debug] [2022-02-10T22:54:25.617Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ming\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2022-02-10T22:54:25.617Z] CLI Version:   10.1.5
-[debug] [2022-02-10T22:54:25.617Z] Platform:      win32
-[debug] [2022-02-10T22:54:25.617Z] Node Version:  v17.4.0
-[debug] [2022-02-10T22:54:25.618Z] Time:          Fri Feb 11 2022 00:54:25 GMT+0200 (Eastern European Standard Time)
-[debug] [2022-02-10T22:54:25.618Z] ----------------------------------------------------------------------
+[debug] [2022-02-10T22:57:05.955Z] ----------------------------------------------------------------------
+[debug] [2022-02-10T22:57:05.957Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ming\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-02-10T22:57:05.958Z] CLI Version:   10.1.5
+[debug] [2022-02-10T22:57:05.958Z] Platform:      win32
+[debug] [2022-02-10T22:57:05.958Z] Node Version:  v17.4.0
+[debug] [2022-02-10T22:57:05.959Z] Time:          Fri Feb 11 2022 00:57:05 GMT+0200 (Eastern European Standard Time)
+[debug] [2022-02-10T22:57:05.959Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2022-02-10T22:54:25.684Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2022-02-10T22:54:25.684Z] > authorizing via signed-in user (cristyt2011@gmail.com)
-[debug] [2022-02-10T22:54:25.684Z] [iam] checking project cristian-personalwebsite for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2022-02-10T22:54:25.687Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cristian-personalwebsite:testIamPermissions [none]
-[debug] [2022-02-10T22:54:25.687Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cristian-personalwebsite:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2022-02-10T22:54:46.995Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/cristian-personalwebsite:testIamPermissions
-[debug] [2022-02-10T22:54:46.997Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cristian-personalwebsite [none]
-[debug] [2022-02-10T22:55:08.030Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cristian-personalwebsite
-[debug] [2022-02-10T22:55:08.804Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cristian-personalwebsite
+[debug] [2022-02-10T22:57:06.020Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-10T22:57:06.020Z] > authorizing via signed-in user (cristyt2011@gmail.com)
+[debug] [2022-02-10T22:57:06.020Z] [iam] checking project cristian-personalwebsite for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-02-10T22:57:06.022Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cristian-personalwebsite:testIamPermissions [none]
+[debug] [2022-02-10T22:57:06.023Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cristian-personalwebsite:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-02-10T22:57:07.244Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cristian-personalwebsite:testIamPermissions 200
+[debug] [2022-02-10T22:57:07.245Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cristian-personalwebsite:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-02-10T22:57:07.246Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cristian-personalwebsite [none]
+[debug] [2022-02-10T22:57:28.291Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cristian-personalwebsite
+[debug] [2022-02-10T22:57:49.328Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cristian-personalwebsite
     at RetryOperation._fn (C:\Users\Ming\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:240:31)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [error] 
