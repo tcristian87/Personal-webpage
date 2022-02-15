@@ -157,7 +157,10 @@
   background: url("sn-rockpaper.jpg") center/cover no-repeat;
 }
 .card01-img .wrapper {
-  background: url("appointment-app.jpg") center/cover no-repeat;
+  background: url("ionic3-angular4.jpg") center/cover no-repeat;
+  }
+  .card02-img .wrapper {
+    background: url("reactapp.jpg") center/cover no-repeat;
   }
 
 .example-2 .data {
