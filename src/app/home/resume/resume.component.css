@@ -156,6 +156,9 @@
 .card3-img .wrapper {
   background: url("sn-rockpaper.jpg") center/cover no-repeat;
 }
+.card01-img .wrapper {
+  background: url("appointment-app.jpg") center/cover no-repeat;
+  }
 
 .example-2 .data {
   background: rgba(0, 0, 0, 0.4);
